@@ -5,8 +5,7 @@ const isLoggedIn = require('../config/auth')
 
 
 
-// Add route to add in sneakers
-
+// 
 
 // show sneaker page when clickedd on
 router.get('/:id', sneakerCtrl.show)

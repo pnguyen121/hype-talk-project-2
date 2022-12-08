@@ -1,3 +1,11 @@
+/* Bring in google font */
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+*{
+  font-family: 'Jost', sans-serif;
+}
+
+
 .brand-logo {
   margin-left: 15px;
 }
@@ -48,8 +56,14 @@ nav {
   text-align: center;
 }
 
+nav h1 {
+  font-size: 35px;
+  font-style: italic;
+}
 
-
+#span-talk {
+  color: lightslategray;
+}
 
 
 

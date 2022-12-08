@@ -2,12 +2,12 @@
 
 <h1 id="upcoming-releases">Upcoming Releases</h1>
 <!-- add the correct link path here -->
-<a href="/sneakers/:id">
-    <img src="https://s3.amazonaws.com/solelinks/storage/images/7563/-CZ8065_100_A_PREM.jpeg" alt="">
-    <h4>NOCTA x NIKE AIR FORCE ONE </h4>
-    <!-- This h4 and the release date would be pulled from the data base along w the other shoes -->
-    <p>12-08-2022</p>
-</a>
+<% sneakers.forEach(s => { %>
+    <a href="/sneakers/<%= s.id %>"><img src="<%= s.sneakerImage %> " alt="">
+        <div><%= s.sneakerName %></div>
+        <div><%= s.releaseDate %></div>  
+    </a>
+<% }) %> 
 
 
 
