@@ -4,8 +4,25 @@ const User = require('../models/user')
 
 module.exports = {
     create,
+    delete: deleteComment
 }
 
+
+
+// delete a comment
+function deleteComment (req, res){
+    Sneaker.findOne({'comments._id': req.params.id, 'comments.user': req.user._id}, function(err, sneakerDoc){
+        if(!sneakerDoc) return res.redirect('/sneakers')
+
+        sneakerDoc.comments.remove(req.params.id);
+
+        // save it since we change the document
+        sneakerDoc.save(function(err){
+            if(err) return res.send('err, check terminaal fix this');
+            res.redirect(`/sneakers/${sneakerDoc._id}`)
+        })
+    })
+}
 
 
 // create a comment

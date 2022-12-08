@@ -6,6 +6,9 @@ const isLoggedIn = require('../config/auth')
 
 
 
+// delete comments
+router.delete('/comments/:id', commentCtrl.delete)
+
 // add in comments
 router.post('/sneakers/:id/comments', commentCtrl.create)
 

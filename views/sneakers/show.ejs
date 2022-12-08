@@ -14,7 +14,7 @@
 <div> <% if (user) { %>
     <form id="add-review-form" method="POST" action="/sneakers/<%= sneaker.id %>/comments">
         <label>Comment:</label>
-        <textarea name="commentContent"></textarea>
+        <textarea name="commentContent" placeholder="Add text here"></textarea>
         <label>Cop or Drop:</label>
         <select name="copOrDrop">
           <option value="cop">Cop</option>
@@ -33,7 +33,7 @@
         <table>
           <thead>
             <tr>
-                <th>User</th>
+              <th>User</th>
               <th>Date</th>
               <th>Comment</th>
               <th>Cop or Drop</th>
@@ -43,7 +43,7 @@
             <% let total=0 %>
               <% sneaker.comments.forEach(function(c) { %>
                   <tr>
-                    <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+                    <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
                     <td>
                       <%= c.createdAt.toLocaleDateString() %>
                     </td>

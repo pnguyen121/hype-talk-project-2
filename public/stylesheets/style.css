@@ -65,6 +65,12 @@ nav h1 {
   color: lightslategray;
 }
 
+/* user comment image */
+.comment-user img{
+  border-radius: 50%;
+  height: 60px;
+}
+
 
 
 footer {
