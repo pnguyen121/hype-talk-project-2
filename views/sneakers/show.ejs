@@ -11,9 +11,68 @@
     <p>Style Code:</p>
 </div>
 
-<div>
+<div> <% if (user) { %>
+    <form id="add-review-form" method="POST" action="/sneakers/<%= sneaker.id %>/comments">
+        <label>Comment:</label>
+        <textarea name="commentContent"></textarea>
+        <label>Cop or Drop:</label>
+        <select name="copOrDrop">
+          <option value="cop">Cop</option>
+          <option value="drop">Drop</option>
+        </select>
+        <input type="submit" value="Add Comment">
+      </form>
 
-    
+      <% } else { %>
+
+        <p id="must-login">You have to login in order to comment</p>
+
+        <% } %>
+
+      <% if (sneaker.comments.length) { %>
+        <table>
+          <thead>
+            <tr>
+                <th>User</th>
+              <th>Date</th>
+              <th>Comment</th>
+              <th>Cop or Drop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% let total=0 %>
+              <% sneaker.comments.forEach(function(c) { %>
+                  <tr>
+                    <td class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+                    <td>
+                      <%= c.createdAt.toLocaleDateString() %>
+                    </td>
+                    <td>
+                      <%= c.commentContent %>
+                    </td>
+                    <td>
+                      <%= c.copOrDrop %>
+                    </td>
+                    <td>
+                      <% if (user && user._id.equals(c.user)) { %>
+                        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                          <button type="submit">X</button>
+                        </form>
+                      <% } %>
+                    </td>
+            
+        
+                  </tr>
+                  <% }); %>
+          </tbody>
+        </table>
+        <% } else { %>
+          <h5>No Comments Yet</h5>
+          <% } %>
+
+
+
+
 </div>
 
 

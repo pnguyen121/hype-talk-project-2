@@ -1,19 +1,13 @@
 const router = require('express').Router();
 const passport = require('passport');
 const sneakerCtrl = require('../controllers/sneakers')
+const commentCtrl = require('../controllers/comments')
 const isLoggedIn = require('../config/auth')
 
 
 
-
-// show sneaker page when clickedd on
-router.get('/:id', sneakerCtrl.show)
-
-// show all of the sneakers 
-router.get('/', sneakerCtrl.index)
-
-
-
+// add in comments
+router.post('/sneakers/:id/comments', commentCtrl.create)
 
 
 module.exports = router;
