@@ -51,13 +51,22 @@
                       <%= c.commentContent %>
                     </td>
                     <td>
-                      <%= c.copOrDrop %>
+                      <%= c.copOrDrop.toUpperCase() %>
                     </td>
                     <td>
                       <% if (user && user._id.equals(c.user)) { %>
                         <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                           <button type="submit">X</button>
                         </form>
+                      <% } %>
+                      <!-- Later make this only appear when a person clicks the edit button by adding an event listener -->
+                      <% if (user && user._id.equals(c.user)) { %>
+                        <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                            <!-- Value attribute is being set to the comment's current text -->
+                            <input name="text" value="<%= c.text %>">
+                            <button type="submit">UPDATE COMMENT</button>
+                          </form>
+                        <button>Edit</button>
                       <% } %>
                     </td>
             

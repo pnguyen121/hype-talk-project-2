@@ -5,6 +5,11 @@ const commentCtrl = require('../controllers/comments')
 const isLoggedIn = require('../config/auth')
 
 
+// actually changing the comment
+router.put('/comments/:id', commentCtrl.update)
+
+// get the comment to update 
+router.get('/comments/:id/edit', commentCtrl.edit)
 
 // delete comments
 router.delete('/comments/:id', commentCtrl.delete)

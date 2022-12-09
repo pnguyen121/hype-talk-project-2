@@ -4,7 +4,53 @@ const User = require('../models/user')
 
 module.exports = {
     create,
-    delete: deleteComment
+    delete: deleteComment,
+    edit: getComment,
+    update,
+}
+
+// actually change the comment 
+async function update (req, res){
+    try{
+        console.log('update function just ran')
+
+        const sneakerDoc = await Sneaker.findOne({'comments._id': req.params.id})
+
+        const commentSubdoc = sneakerDoc.comments.id(req.params.id);
+        console.log(commentSubdoc)
+
+        // ensure that the comment wass created by the logged in user
+        // Update the text of the comment
+        commentSubdoc.commentContent = req.body.text
+
+        // save the document since we changed the comment within it
+        sneakerDoc.save(function(err){
+            // redirect back to the books show view
+            res.redirect(`/sneakers/${sneakerDoc._id}`)
+        })
+
+    } catch(err){
+
+        console.log(err)
+        res.send('check terminal error')
+    }
+}
+
+// getting the comment to update
+async function getComment (req, res){
+    try{
+        console.log('getComment function raan')
+        const sneakerDoc = await Sneaker.findOne({'comments._id': req.params.id})
+    
+            const comment = sneakerDoc.comments.id(req.params.id);
+
+            res.render('comments/edit', {comment: comment})
+
+
+    }catch(err){
+        console.log(err)
+        res.send('error check terminal')
+    }
 }
 
 
