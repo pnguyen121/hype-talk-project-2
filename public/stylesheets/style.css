@@ -57,30 +57,47 @@ nav {
   justify-content: space-around;
   align-items: center;
   background: lightgrey;
+  height: 12%;
 }
 
-img{
+#index-row img{
   height: 270px;
+  width: 300px;
 }
+
 
 
 
 /* show page stuff */
 #container-show{
-  margin-top: 80px;
-  margin-bottom: 30%;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+#column-show{
+  height: 80vh;
 }
 
 #sneaker-image{
-  width: 55%;
+  width: 65%;
+}
+
+#description {
+  margin-top: 65px;
+  height: 25%;
 }
 
 
+/* index page styles */
 
+#index-container {
+  height: 100vh;
+}
 
 #upcoming-releases {
   text-align: center;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 nav h1 {

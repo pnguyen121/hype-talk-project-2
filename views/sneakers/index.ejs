@@ -3,8 +3,8 @@
 <h1 id="upcoming-releases" class="m-2">Upcoming Releases</h1>
 <!-- add the correct link path here -->
 
-<div class="container">
-    <div class="row">
+<div class="container" id="index-container">
+    <div class="row" id="index-row">
 <% sneakers.forEach(s => { %>
         <div class="col-sm-4">
     <a href="/sneakers/<%= s.id %>"><img src="<%= s.sneakerImage %> " alt="">

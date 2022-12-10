@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
-<div class="container" id="container-show">
-    <div class="row m-2">
-        <div class="col-md-6">
+<div class="container h-100" id="container-show">
+    <div class="row h-100">
+        <div class="col-md-6" id="column-show">
 <div>
     <img class="" id="sneaker-image" src="<%= sneaker.sneakerImage %>" alt=""> 
 </div>
-<div id="description" class="m-5">
+<div id="description">
     <h3 class="text-left"><%= sneaker.sneakerName %></h3>
     <p class="h5"> <strong>Release Date:</strong> <%= sneaker.releaseDate %> </p>
     <p class="h5"><%= sneaker.sneakerDetails %> </p>
 </div>
     </div>
-<div class="col-md-6">
+<div class="col-md-6" id="column-show">
 <div> 
       <% if (sneaker.comments.length) { %>
         <table class="table table-striped mb-4">
@@ -40,7 +40,7 @@
                     <td>
                       <% if (user && user._id.equals(c.user)) { %>
                         <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                          <button type="submit">X</button>
+                          <button type="submit" class="btn btn-danger">X</button>
                         </form>
                       <% } %>
                       <!-- Later make this only appear when a person clicks the edit button by adding an event listener -->
@@ -50,7 +50,7 @@
                             <input name="text" value="<%= c.text %>">
                             <button type="submit">UPDATE COMMENT</button>
                           </form>
-                        <button>Edit</button>
+                        <button type="button" class="btn btn-primary">Edit</button>
                       <% } %>
                     </td>
             
@@ -65,14 +65,18 @@
 
           <% if (user) { %>
             <form id="add-review-form" method="POST" action="/sneakers/<%= sneaker.id %>/comments">
+                <div class="form-group">
                 <label>Comment:</label>
-                <textarea name="commentContent" placeholder="Add text here"></textarea>
+                <textarea name="commentContent" class="form-control" placeholder="Add text here"></textarea>
+                </div>
+                <div class="form-group">
                 <label>Cop or Drop:</label>
-                <select name="copOrDrop">
+                <select name="copOrDrop" class="form-control">
                   <option value="cop">Cop</option>
                   <option value="drop">Drop</option>
                 </select>
-                <input type="submit" value="Add Comment">
+                </div>
+                <input type="submit" value="Add Comment" class="btn btn-primary">
               </form>
         
               <% } else { %>
