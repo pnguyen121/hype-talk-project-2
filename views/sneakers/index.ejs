@@ -1,13 +1,20 @@
 <%- include('../partials/header') %> 
 
-<h1 id="upcoming-releases">Upcoming Releases</h1>
+<h1 id="upcoming-releases" class="m-2">Upcoming Releases</h1>
 <!-- add the correct link path here -->
+
+<div class="container">
+    <div class="row">
 <% sneakers.forEach(s => { %>
+        <div class="col-sm-4">
     <a href="/sneakers/<%= s.id %>"><img src="<%= s.sneakerImage %> " alt="">
-        <div><%= s.sneakerName %></div>
-        <div><%= s.releaseDate %></div>  
+        <div class="text-justify h4"><%= s.sneakerName %></div>
+        <div class="text-justify h5"><%= s.releaseDate %></div>  
     </a>
+        </div>
 <% }) %> 
+    </div>
+</div>
 
 
 

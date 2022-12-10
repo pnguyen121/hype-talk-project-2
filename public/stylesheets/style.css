@@ -5,6 +5,10 @@
   font-family: 'Jost', sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 
 .brand-logo {
   margin-left: 15px;
@@ -39,7 +43,10 @@
   height: 30px;
 }
 
-/* MY STYlING */
+/* MY STYlING ============================================== */
+
+/* utility classes aka classes used pretty often */
+
 a{
   text-decoration: none;
 }
@@ -52,8 +59,28 @@ nav {
   background: lightgrey;
 }
 
+img{
+  height: 270px;
+}
+
+
+
+/* show page stuff */
+#container-show{
+  margin-top: 80px;
+  margin-bottom: 30%;
+}
+
+#sneaker-image{
+  width: 55%;
+}
+
+
+
+
 #upcoming-releases {
   text-align: center;
+  padding: 20px;
 }
 
 nav h1 {
@@ -64,6 +91,8 @@ nav h1 {
 #span-talk {
   color: lightslategray;
 }
+
+
 
 /* user comment image */
 .comment-user img{
