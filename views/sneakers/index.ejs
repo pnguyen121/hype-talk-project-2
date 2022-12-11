@@ -1,9 +1,16 @@
 <%- include('../partials/header') %> 
-
-<h1 id="upcoming-releases" class="m-2">Upcoming Releases</h1>
-<!-- add the correct link path here -->
-
+<section id="hero">
+    <div id="hero-content">
+        <h1 id="welcome" class="text-center">Welcome To HYPE-TALK</h1>
+        <h4 class="text-center">Sneaker Release Information</h4>
+        <p class="text-center">View Upcoming Releases</p>
+        <div id="hero-button-div">
+        <a href="#index-container" class="btn" id="hero-link-a">Upcoming Releases</a>
+        </div>
+    </div>
+</section>
 <div class="container" id="index-container">
+    <h1 id="upcoming-releases" class="">Upcoming Releases</h1>
     <div class="row" id="index-row">
 <% sneakers.forEach(s => { %>
         <div class="col-sm-4">

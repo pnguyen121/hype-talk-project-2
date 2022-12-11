@@ -51,19 +51,53 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  opacity: 0.6;
+}
+
 nav {
   display: flex;
   align-content: center;
   justify-content: space-around;
   align-items: center;
   background: lightgrey;
-  height: 12%;
+  height: 10%;
 }
 
 #index-row img{
   height: 270px;
   width: 300px;
 }
+
+#hero-button-div {
+  margin-top: 5%;
+}
+
+#hero-link-a{
+  /* display: inline-block; */
+  background: black;
+  color: white;
+}
+
+
+/* main hero image on index page */
+#hero {
+  height: 100vh;
+  position: relative;
+  background: url('/images/union1wcityinback.jpeg') no-repeat center center/cover;
+  margin-bottom: 50px;
+}
+
+#hero-content{
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
 
 
 
@@ -85,6 +119,14 @@ nav {
 #description {
   margin-top: 65px;
   height: 25%;
+  padding: 10px;
+  width: 65%;
+  background: linear-gradient(to right, black, lightgrey);
+  color: white;
+}
+
+#community-talks {
+  margin-bottom: 7%;
 }
 
 
@@ -94,14 +136,15 @@ nav {
   height: 100vh;
 }
 
+
 #upcoming-releases {
   text-align: center;
-  padding: 20px;
-  margin-bottom: 30px;
+  margin: 0;
+  height: 15%;
 }
 
 nav h1 {
-  font-size: 35px;
+  font-size: 45px;
   font-style: italic;
 }
 
@@ -122,4 +165,7 @@ nav h1 {
 footer {
   display: flex;
   background: grey;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
 }
