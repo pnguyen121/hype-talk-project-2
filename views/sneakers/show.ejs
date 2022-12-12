@@ -28,6 +28,7 @@
             <tr>
               <th scope="col">User</th>
               <th scope="col">Date</th>
+              <th scope="col">Time</th>
               <th scope="col">Comment</th>
               <th scope="row" class="row" id="copordrop">Cop or Drop</th>
             </tr>
@@ -36,9 +37,12 @@
             <% let total=0 %>
               <% sneaker.comments.forEach(function(c) { %>
                   <tr>
-                    <td class="comment-user row"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
-                    <td class="row">
+                    <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+                    <td class="">
                       <%= c.createdAt.toLocaleDateString() %>
+                    </td>
+                    <td class="">
+                      <%= c.createdAt.toLocaleTimeString() %>
                     </td>
                     <td>
                       <%= c.commentContent %>
@@ -56,12 +60,12 @@
                     <td>
                       <!-- Later make this only appear when a person clicks the edit button by adding an event listener -->
                       <% if (user && user._id.equals(c.user)) { %>
-                        <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                        <form id="update-comment-form" action="/comments/<%= c._id %>?_method=PUT" method="POST">
                             <!-- Value attribute is being set to the comment's current text -->
                             <input name="text" value="<%= c.text %>">
                             <button type="submit" class="btn btn-success">UPDATE COMMENT</button>
                           </form>
-                        <button type="button" class="btn btn-primary">Edit</button>
+                        <button id="edit-button" type="button" class="btn btn-primary">Edit</button>
                       <% } %>
                     </td>
                     </td>
@@ -105,7 +109,29 @@
     </div>
 </div>
 
+<script>
+    const myVar = 'MY VARIABLE'
 
+    // Grab the elements
+    const editBtnEl = document.querySelector('#edit-button')
+    const updateCommentFormEl = document.querySelectorAll('#update-comment-form')
+
+    // make the form not display by using a for loop to change each ddisplay to none
+    for(let i = 0; i < updateCommentFormEl.length; i++){
+    updateCommentFormEl[i].style.display = 'none'
+    }
+
+    // on click function for edit btn
+    editBtnEl.addEventListener('click', changeDisplay)
+
+    // actual function
+    function changeDisplay() {
+        for(let i = 0; i < updateCommentFormEl.length; i++){
+    updateCommentFormEl[i].style.display = 'block'
+    }
+    }
+
+</script>
 
 
 <%- include('../partials/footer') %>

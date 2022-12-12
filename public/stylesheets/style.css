@@ -6,7 +6,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: 100vh;
 }
 
 
@@ -75,6 +75,7 @@ nav {
   background: lightgrey;
   height: 10%;
   color: black;
+  width: 100vw;
 }
 
 #index-row img{
@@ -110,9 +111,17 @@ nav {
   text-align: center;
 }
 
+#welcome {
+  text-shadow: 1px 1px 0 lightgrey;
+  color: black;
+}
+
 #hero-subtext{
   /* font-weight: 700;
   color: white; */
+  /* color: lightgrey; */
+  color: black;
+  text-shadow: 1px 1px 0 lightgrey;
 }
 
 
@@ -133,6 +142,8 @@ nav {
 }
 
 #description {
+  display: flex;
+  flex-direction: column;
   margin-top: 65px;
   height: 25%;
   padding: 10px;
@@ -166,11 +177,11 @@ th, thead{
   height: 100vh;
 }
 
-
 #upcoming-releases {
   text-align: center;
-  margin: 0;
-  height: 15%;
+  margin-bottom: 10%;
+  height: 50%;
+  /* width: 945px; */
 }
 
 nav h1 {
@@ -192,11 +203,26 @@ nav h1 {
 
 
 
-footer {
+
+
+
+
+/* FOOTER STYLES */
+
+#show-footer {
   display: flex;
   background: lightgrey;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
   height: 7%;
 }
+
+
+/* JAVASCRIPT UTILITY STYLES */
+/* #update-comment-form{
+  display: none;
+}
+
+.display{
+  display: block;
+} */
