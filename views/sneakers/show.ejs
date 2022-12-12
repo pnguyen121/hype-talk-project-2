@@ -1,6 +1,14 @@
 <%- include('../partials/header') %>
+<nav id="nav-bar-2">
+    <h1>HYPE-<span id="span-talk">TALK</span></h1>
+    <% if (user) { %>
+        <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+</nav>
 <div class="container h-100" id="container-show">
-    <div class="row h-100">
+    <div class="row h-100" id="show-row">
         <div class="col-md-6" id="column-show">
 <div>
     <img class="" id="sneaker-image" src="<%= sneaker.sneakerImage %>" alt=""> 
@@ -21,7 +29,7 @@
               <th scope="col">User</th>
               <th scope="col">Date</th>
               <th scope="col">Comment</th>
-              <th scope="col">Cop or Drop</th>
+              <th scope="row" class="row" id="copordrop">Cop or Drop</th>
             </tr>
           </thead>
           <tbody>
@@ -38,21 +46,24 @@
                     <td>
                       <%= c.copOrDrop.toUpperCase() %>
                     </td>
-                    <td>
+                    <td class="row">
                       <% if (user && user._id.equals(c.user)) { %>
                         <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                           <button type="submit" class="btn btn-danger">X</button>
                         </form>
                       <% } %>
+                    </td>
+                    <td>
                       <!-- Later make this only appear when a person clicks the edit button by adding an event listener -->
                       <% if (user && user._id.equals(c.user)) { %>
                         <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
                             <!-- Value attribute is being set to the comment's current text -->
                             <input name="text" value="<%= c.text %>">
-                            <button type="submit">UPDATE COMMENT</button>
+                            <button type="submit" class="btn btn-success">UPDATE COMMENT</button>
                           </form>
                         <button type="button" class="btn btn-primary">Edit</button>
                       <% } %>
+                    </td>
                     </td>
             
         

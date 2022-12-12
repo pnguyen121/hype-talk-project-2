@@ -49,6 +49,8 @@ html, body {
 
 a{
   text-decoration: none;
+  color: black;
+
 }
 
 a:hover{
@@ -60,8 +62,19 @@ nav {
   align-content: center;
   justify-content: space-around;
   align-items: center;
+  opacity: 70%;
   background: lightgrey;
   height: 10%;
+  text-shadow: 2px 1px 0 white;
+}
+#nav-bar-2 {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background: lightgrey;
+  height: 10%;
+  color: black;
 }
 
 #index-row img{
@@ -70,7 +83,7 @@ nav {
 }
 
 #hero-button-div {
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 #hero-link-a{
@@ -95,9 +108,12 @@ nav {
   align-content: center;
   justify-content: center;
   text-align: center;
-
 }
 
+#hero-subtext{
+  /* font-weight: 700;
+  color: white; */
+}
 
 
 
@@ -105,7 +121,7 @@ nav {
 /* show page stuff */
 #container-show{
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 6%;
 }
 
 #column-show{
@@ -127,6 +143,20 @@ nav {
 
 #community-talks {
   margin-bottom: 7%;
+}
+
+#copordrop{
+  width: 105%;
+  /* padding: 30px; */
+  border-spacing: 15px;
+}
+
+th, thead{
+  font-weight: bold;
+}
+
+#show-row{
+  height: 100vh;
 }
 
 
@@ -164,8 +194,9 @@ nav h1 {
 
 footer {
   display: flex;
-  background: grey;
+  background: lightgrey;
   justify-content: center;
   align-items: center;
   margin-top: 8%;
+  height: 7%;
 }
