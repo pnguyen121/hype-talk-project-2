@@ -6,7 +6,7 @@
 }
 
 html, body {
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -58,7 +58,7 @@ a:hover{
 }
 
 nav {
-  display: flex;
+  display: flex !important;
   align-content: center;
   justify-content: space-around;
   align-items: center;
@@ -133,9 +133,6 @@ nav {
   margin-top: 6%;
 }
 
-#column-show{
-  height: 80vh;
-}
 
 #sneaker-image{
   width: 65%;
@@ -174,7 +171,12 @@ th, thead{
 /* index page styles */
 
 #index-container {
-  height: 100vh;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+
 }
 
 #upcoming-releases {
@@ -215,6 +217,11 @@ nav h1 {
   justify-content: center;
   align-items: center;
   height: 7%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 5%;
 }
 
 
@@ -226,3 +233,81 @@ nav h1 {
 .display{
   display: block;
 } */
+
+
+/* mobile styling */
+
+@media(max-width: 786px){
+
+  /* index page */
+  #welcome{
+    font-size: 30px;
+  }
+
+  #hero-subtext{
+    font-size: 22px;
+  }
+
+
+  /* show page stuff */
+  #column-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9%;
+    /* height: 100vh; */
+  }
+  #column-show-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9%;
+    height: 100vh;
+  }
+
+  #sneaker-image{
+    width: 100%;
+  }
+
+  #description{
+    width: 100%;
+  }
+
+  table {
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
+    width: auto;
+  }
+  
+  td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+
+  .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 3px !important;
+  }
+
+  /* footer mobile */
+  #content-wrapper{
+    padding-bottom: 100px;
+  }
+
+  #show-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+
+
+  }
+
+
+
+
+}
+

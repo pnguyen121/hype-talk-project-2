@@ -7,7 +7,7 @@
         <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <% } %>
 </nav>
-<div class="container h-100" id="container-show">
+<div class="container" id="container-show">
     <div class="row h-100" id="show-row">
         <div class="col-md-6" id="column-show">
 <div>
@@ -19,9 +19,9 @@
     <p class="h5"><%= sneaker.sneakerDetails %> </p>
 </div>
     </div>
-<div class="col-md-6" id="column-show">
+<div class="col-md-6" id="column-show-2">
     <h3 id="community-talks" class="text-center">Community Talks</h3>
-<div> 
+<div id="table"> 
       <% if (sneaker.comments.length) { %>
         <table class="table table-striped mb-4">
           <thead>
