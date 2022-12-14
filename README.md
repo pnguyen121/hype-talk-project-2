@@ -3,7 +3,7 @@
 
 Project Link -------> https://byzantium-pangolin-cuff.cyclic.app/sneakers <-----
 
-This projects is a full stack application using node.js, express, mongoDB, mongoose, HTML, JavaScript, Bootstrap, and CSS!
+This projects is a full stack application using node.js, express, mongoDB, mongoose, HTML, JavaScript, Bootstrap, oAuth from Google, and CSS!
 
 It has full CRUD operations created by yours truly.
 
