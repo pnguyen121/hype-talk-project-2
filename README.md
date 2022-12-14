@@ -7,10 +7,11 @@ It has full CRUD operations created by yours truly.
 
 
 # Landing Page
-image.png
+![](2022-12-13-21-28-04.png)
 
 # Show Page (CRUD)
-image.png
+![](2022-12-13-21-31-34.png)
+
 
 # How it works
 
