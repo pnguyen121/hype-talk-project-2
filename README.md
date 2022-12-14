@@ -1,7 +1,7 @@
 ## HYPE-TALK
 # Sneaker information created by a sneakerhead to stay up to date on all the upcoming releases and talk amongst the community!
 
-Project Link -------> https://byzantium-pangolin-cuff.cyclic.app/sneakers <-----
+Project Link -------> https://byzantium-pangolin-cuff.cyclic.app <-----
 
 This projects is a full stack application using node.js, express, mongoDB, mongoose, HTML, JavaScript, Bootstrap, oAuth from Google, and CSS!
 
