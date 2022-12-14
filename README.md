@@ -20,3 +20,14 @@ Anybody can view upcoming releases on this application. The key to contributing 
 A user may not add in their own sneakers it is up to the administration to do that to avoid any interupptions. The sneakers are stored in a database and pulled into the site.
 
 The database can be updated whenver needed.
+
+# Planning
+Utilized Trello for user stories, ice box items, and to stay organized 
+![](2022-12-13-21-34-52.png)
+
+# Wire Frame
+![](2022-12-13-21-35-44.png)
+![](2022-12-13-21-50-40.png)
+
+# ERD Diagram
+![](2022-12-13-21-52-12.png)
