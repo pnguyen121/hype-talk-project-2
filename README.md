@@ -9,7 +9,8 @@ It has full CRUD operations created by yours truly.
 
 
 # Landing Page
-/Users/philnguyen/code/hype-talk-project-sneaker/public/images/2022-12-13-21-28-04.png
+
+![] (/Users/philnguyen/code/hype-talk-project-sneaker/public/images/2022-12-13-21-28-04.png)
 ![](2022-12-13-21-28-04.png)
 
 
