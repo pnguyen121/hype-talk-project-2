@@ -9,16 +9,10 @@ It has full CRUD operations created by yours truly.
 
 
 # Landing Page
-<img src = "../images/2022-12-13-21-28-04.png">
-<img src = "./public/images/2022-12-13-21-28-04.png">
 <img src = "public/images/2022-12-13-21-28-04.png">
-![](public/images/2022-12-13-21-28-04.png)
-![](images/2022-12-13-21-28-04.png)
-
 
 # Show Page (CRUD)
-![](2022-12-13-21-31-34.png)
-
+<img src = "public/images/2022-12-13-21-31-34.png">
 
 # How it works
 
@@ -29,15 +23,15 @@ A user may not add in their own sneakers it is up to the administration to do th
 The database can be updated whenver needed.
 
 # Planning
-Utilized Trello for user stories, ice box items, and to stay organized 
-![](2022-12-13-21-34-52.png)
+Utilized Trello for user stories, ice box items, and to stay organized
+<img src = "public/images/2022-12-13-21-34-52.png">
 
 # Wire Frame
-![](2022-12-13-21-35-44.png)
-![](2022-12-13-21-50-40.png)
+<img src = "public/images/2022-12-13-21-35-44.png">
+<img src = "public/images/2022-12-13-21-50-40.png">
 
 # ERD Diagram
-![](2022-12-13-21-52-12.png)
+<img src = "public/images/2022-12-13-21-52-12.png">
 
 # ICE-BOX (future improvements)
 
