@@ -10,6 +10,8 @@ It has full CRUD operations created by yours truly.
 
 # Landing Page
 <img src = "../images/2022-12-13-21-28-04.png">
+<img src = "./public/images/2022-12-13-21-28-04.png">
+<img src = "public/images/2022-12-13-21-28-04.png">
 ![](public/images/2022-12-13-21-28-04.png)
 ![](images/2022-12-13-21-28-04.png)
 
